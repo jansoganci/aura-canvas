@@ -1,0 +1,31 @@
+{
+  "hooks": [
+    {
+      "event": "post-tool-use",
+      "matcher": {
+        "tool_name": "Write",
+        "file_pattern": "*.tsx"
+      },
+      "command": "echo '✓ Component written - remember to test on mobile viewport'",
+      "description": "Reminder after creating TSX files"
+    },
+    {
+      "event": "post-tool-use",
+      "matcher": {
+        "tool_name": "Write",
+        "file_pattern": "worker-api/*.ts"
+      },
+      "command": "echo '⚠️  Worker API changed - run npm run deploy:api to deploy'",
+      "description": "Reminder to deploy worker after API changes"
+    },
+    {
+      "event": "post-tool-use",
+      "matcher": {
+        "tool_name": "Edit",
+        "file_pattern": "types.ts"
+      },
+      "command": "echo '📝 Types updated - check components using these types'",
+      "description": "Reminder when types are modified"
+    }
+  ]
+}

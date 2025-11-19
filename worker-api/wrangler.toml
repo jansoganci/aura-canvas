@@ -1,0 +1,26 @@
+name = "aura-canvas-api"
+compatibility_date = "2025-11-18"
+main = "index.ts"
+
+# D1 Database
+[[d1_databases]]
+binding = "DB"
+database_name = "aura-canvas-db"
+database_id = "7e540aaf-c731-4457-b230-9d0e38564ea8"
+
+# R2 Storage
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "aura-images"
+
+[vars]
+APP_URL = "http://localhost:3000"
+GEMINI_API_KEY = ""
+STRIPE_SECRET_KEY = ""
+STRIPE_WEBHOOK_SECRET = ""
+
+[env.production.vars]
+APP_URL = "https://auracanvas.app"
+GEMINI_API_KEY = ""
+STRIPE_SECRET_KEY = ""
+STRIPE_WEBHOOK_SECRET = ""
